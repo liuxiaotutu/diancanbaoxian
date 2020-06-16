@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///C:/Users/Administrator/Desktop/点餐宝贤/main.js"],"names":["createPage","Page"],"mappings":";;;;;;;;;;kDAAA;AACA;AACA,8F;AACAA,UAAU,CAACC,eAAD,CAAV,C","file":"pages/index/MYNAME.js","sourcesContent":["import 'uni-pages';\nimport Vue from 'vue'\nimport Page from './pages/index/MYNAME.vue'\ncreatePage(Page)"],"sourceRoot":""}

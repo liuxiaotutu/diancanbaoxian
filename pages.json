@@ -3,13 +3,44 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "点餐宝贤"
+			}
+		},
+		{
+			"path": "pages/index/myneme",
+			"style": {
+				"navigationBarTitleText": "个人信息"
+			}
+		},
+		{
+			"path": "pages/index/one",
+			"style": {
+				"navigationBarTitleText": "首页"
 			}
 		}
 	],
+	"tabBar": {
+		"color": "#888888",
+		"selectedColor": "#5fafe4",
+		"borderStyle": "black",
+		"backgroundColor": "#F9F9F9",
+		"list": [{
+				"pagePath": "pages/index/one",
+				"text": "首页",
+				"iconPath": "static/tabbar/user.png",
+				"selectedIconPath": "./static/tabbar/userSelect.png"
+			},
+			{
+				"pagePath": "pages/index/myneme",
+				"text": "个人信息",
+				"iconPath": "static/tabbar/device.png",
+				"selectedIconPath": "static/tabbar/deviceSelect.png"
+			}
+		]
+	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTitleText": "点餐宝贤",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	}

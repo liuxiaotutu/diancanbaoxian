@@ -135,7 +135,27 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -148,13 +168,101 @@ var _default =
 {
   data: function data() {
     return {
-      title: 'Hello' };
+      username: '15652653114',
+      password: '123456' };
+
 
   },
   onLoad: function onLoad() {
 
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    GOhonme: function GOhonme() {
+
+      // uni.navigateTo({
+      // 	url: './one'
+      // });
+      uni.switchTab({
+        url: './one' });
+
+      console.log('小贤');
+
+
+    },
+    appLoginWx: function appLoginWx() {
+
+      uni.getProvider({
+        service: 'oauth',
+        success: function success(res) {
+          console.log(res);
+          if (~res.provider.indexOf('weixin')) {
+            uni.login({
+              provider: 'weixin',
+              success: function success(res) {
+                console.log(res);
+                uni.getUserInfo({
+                  provider: 'weixin',
+                  success: function success(info) {//这里请求接口
+
+                    // console.log(info.userInfo);
+                    // uni.setStorageSync('nemess', JSON.stringify(info.userInfo));
+                    uni.setStorage({
+                      key: 'nemess',
+                      data: JSON.stringify(info.userInfo),
+                      success: function success() {
+                        console.log('success');
+                      } });
+
+                    uni.switchTab({
+                      url: './one' });
+
+
+                  },
+                  fail: function fail() {
+                    uni.showToast({
+                      title: "微信登录授权失败",
+                      icon: "none" });
+
+                  } });
+
+
+              },
+              fail: function fail() {
+                uni.showToast({
+                  title: "微信登录授权失败",
+                  icon: "none" });
+
+              } });
+
+
+          } else {
+            uni.showToast({
+              title: '请先安装微信或升级版本',
+              icon: "none" });
+
+          }
+        } });
+
+
+
+    }
+
+
+    // console.log('微信授权')
+  },
+  goRetrieve: function goRetrieve() {
+    // uni.navigateTo({
+    // 	url:"../register/register"
+    // })
+    console.log('sss');
+  },
+  noPassword: function noPassword() {
+    // uni.navigateTo({
+    // 	url:"../retrieve/retrieve"
+    // })
+    console.log('sss');
+  } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 17 */

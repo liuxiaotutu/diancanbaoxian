@@ -1,0 +1,1 @@
+<view class="content data-v-1a8f9994"><image style="width:100rpx;height:100rpx;border-radius:50%;" src="{{data1.avatarUrl}}" mode class="data-v-1a8f9994"></image><view class="data-v-1a8f9994">{{data1.nickName}}</view><view class="data-v-1a8f9994">{{data1.city}}</view><view class="data-v-1a8f9994">{{data1.country}}</view></view>
